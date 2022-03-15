@@ -1,8 +1,17 @@
-# If enabled, auto-assigns users when a new issue is created 
-# Defaults to true, allows you to install the app globally, and disable on a per-repo basis
+# Set to true to add reviewers to pull requests
+addReviewers: true
+
+# Set to true to add assignees to pull requests
 addAssignees: true
 
-# The list of users to assign to new issues. 
-# If empty or not provided, the repository owner is assigned
-assignees:
+# A list of reviewers to be added to pull requests (GitHub user name)
+reviewers: 
   - fbourgeois24
+
+# A list of keywords to be skipped the process that add reviewers if pull requests include it 
+skipKeywords:
+  - wip
+
+# A number of reviewers added to the pull request
+# Set 0 to add all the reviewers (default: 0)
+numberOfReviewers: 0
