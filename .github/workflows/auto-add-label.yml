@@ -10,5 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions-ecosystem/action-add-labels@v1
+        if: join(github.event.issue.labels) == ''
         with:
           labels: a_definir
