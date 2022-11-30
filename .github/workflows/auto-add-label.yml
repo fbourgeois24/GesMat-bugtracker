@@ -5,19 +5,22 @@ on:
     types: opened
 
 jobs:
-  add_label:
+  add_labels:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions-ecosystem/action-add-labels@v1
+      #- uses: actions/checkout@v2
+      - name: a_definir
+        uses: actions-ecosystem/action-add-labels@v1
         if: join(github.event.issue.labels) == ''
         with:
           labels: a_definir
-  company_label:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Label CCRAS
+      - name: label CCRAS
         uses: actions-ecosystem/action-add-labels@v1
         if: contains(${{ github.event.issue.body }}, CCRAS)
         with:
           labels: CCRAS
+      - name: label v1.2.0
+        uses: actions-ecosystem/action-add-labels@v1
+        if: contains(${{ github.event.issue.body }}, CCRAS)
+        with:
+          labels: v1.2.0
