@@ -15,3 +15,9 @@ jobs:
           labels: a_definir
   company_label:
     runs-on: ubuntu-latest
+    steps:
+      - name: Label CCRAS
+        uses: actions-ecosystem/action-add-labels@v1
+        if: contains(${{ github.event.issue.body }}, CCRAS)
+        with:
+          labels: CCRAS
