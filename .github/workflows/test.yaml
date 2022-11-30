@@ -1,5 +1,18 @@
-   - name: Split branch name
-        env:
-          BRANCH: ${{ github.ref_name }}
-        id: split
-        run: echo "::set-output name=fragment::${BRANCH##*/}"
+name: test
+
+on:
+  issues:
+    types: opened
+
+jobs:
+  add_label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jungwinter/split@master
+        id: branch
+        with:
+          msg: ${{ github.event.issue.body }}
+          separator: "%0D%0A"
+          maxsplit: -1
+      - name: View issue information
+         run:echo "$branch.length"
