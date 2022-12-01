@@ -1,0 +1,16 @@
+---
+name: "tagged-release"
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  add_labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: label version
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: ${{  github.ref_name }}
