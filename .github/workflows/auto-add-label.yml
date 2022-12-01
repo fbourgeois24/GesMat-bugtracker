@@ -17,22 +17,22 @@ jobs:
       - name: echo
         run: |
           echo github.event.issue.body
-          echo contains(${{ github.event.issue.body }}, CCRAS)
+          echo contains(github.event.issue.body, CCRAS)
       
       - name: label CCRAS
-        if: contains(${{ github.event.issue.body }}, CCRAS)
+        if: contains(github.event.issue.body, CCRAS)
         uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: CCRAS
       
       - name: label v1.3.2
-        if: contains(${{ github.event.issue.body }}, 1.3.2)
+        if: contains(github.event.issue.body, 1.3.2)
         uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: v1.3.2
                 
       - name: label v1.3.3
-        if: contains(${{ github.event.issue.body }}, 1.3.3)
+        if: contains(github.event.issue.body, 1.3.3)
         uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: v1.3.3
