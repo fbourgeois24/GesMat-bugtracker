@@ -16,7 +16,7 @@ jobs:
       
       - name: echo
         run: |
-          echo ${{ github.event.issue.body }}
+          echo github.event.issue.body
           echo contains(${{ github.event.issue.body }}, CCRAS)
       
       - name: label CCRAS
