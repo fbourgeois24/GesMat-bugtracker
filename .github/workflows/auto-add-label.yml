@@ -14,10 +14,10 @@ jobs:
         with:
           labels: a_definir
       
-      - name: echo
-        run: |
-          echo github.event.issue.body
-          echo contains(github.event.issue.body, 'CCRAS')
+#       - name: echo
+#         run: |
+#           echo github.event.issue.body
+#           echo contains(github.event.issue.body, 'CCRAS')
       
       - name: label CCRAS
         if: contains(github.event.issue.body, 'CCRAS')
