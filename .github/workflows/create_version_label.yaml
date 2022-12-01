@@ -1,5 +1,5 @@
 ---
-name: "create new version label"
+name: "Create new version label"
 
 on:
   push:
