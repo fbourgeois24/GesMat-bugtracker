@@ -1,5 +1,5 @@
 ---
-name: "tagged-release"
+name: "create new version label"
 
 on:
   push:
