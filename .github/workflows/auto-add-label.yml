@@ -16,11 +16,11 @@ jobs:
           labels: a_definir
       - name: label CCRAS
         uses: actions-ecosystem/action-add-labels@v1
-        if: contains(${{ github.event.issue.body }}, CCRAS)
+        if: contains(${{ github.event.issue.body }}, v1.2.0)
         with:
           labels: CCRAS
-      - name: label v1.2.0
+      - name: label v1.3.2
         uses: actions-ecosystem/action-add-labels@v1
-        if: contains(${{ github.event.issue.body }}, CCRAS)
+        if: contains(${{ github.event.issue.body }}, v1.3.2)
         with:
-          labels: v1.2.0
+          labels: v1.3.2
