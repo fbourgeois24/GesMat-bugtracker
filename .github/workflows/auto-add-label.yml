@@ -8,17 +8,17 @@ jobs:
   add_labels:
     runs-on: ubuntu-latest
     steps:
-      - name: label a_definir
-        if: join(github.event.issue.labels) == ''
-        uses: actions-ecosystem/action-add-labels@v1
-        with:
-          labels: a_definir
-       
       - name: label bug
         if: contains(github.event.issue.body, 'bug') || contains(github.event.issue.body, 'Bug') || contains(github.event.issue.body, 'BUG') || contains(github.event.issue.title, 'bug') || contains(github.event.issue.title, 'Bug') || contains(github.event.issue.title, 'BUG')
         uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: bug
+          
+      - name: label a_definir
+        if: join(github.event.issue.labels) == ''
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: a_definir
       
       - name: label CCRAS
         if: contains(github.event.issue.body, 'CCRAS')
