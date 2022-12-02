@@ -13,6 +13,12 @@ jobs:
         uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: a_definir
+       
+      - name: label bug
+        if: contains(github.event.issue.body, 'bug') || contains(github.event.issue.body, 'Bug') || contains(github.event.issue.body, 'BUG') || contains(github.event.issue.title, 'bug') || contains(github.event.issue.title, 'Bug') || contains(github.event.issue.title, 'BUG')
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: bug
       
       - name: label CCRAS
         if: contains(github.event.issue.body, 'CCRAS')
