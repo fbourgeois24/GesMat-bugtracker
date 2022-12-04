@@ -31,3 +31,9 @@ jobs:
         uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: v1.4.3
+                                    
+      - name: label v1.4.4
+        if: contains(github.event.issue.body, '1.4.4')
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: v1.4.4
