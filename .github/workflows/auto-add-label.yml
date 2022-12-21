@@ -26,14 +26,14 @@ jobs:
         with:
           labels: CCRAS
                           
-      - name: label v1.4.3
-        if: contains(github.event.issue.body, '1.4.3')
+      - name: label v1.4.6
+        if: contains(github.event.issue.body, '1.4.6')
         uses: actions-ecosystem/action-add-labels@v1
         with:
-          labels: v1.4.3
+          labels: v1.4.6
                                     
-      - name: label v1.4.4
-        if: contains(github.event.issue.body, '1.4.4')
+      - name: label v1.4.7
+        if: contains(github.event.issue.body, '1.4.7')
         uses: actions-ecosystem/action-add-labels@v1
         with:
-          labels: v1.4.4
+          labels: v1.4.7
