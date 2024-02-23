@@ -58,3 +58,8 @@ jobs:
         uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: v2.0.3
+      - name: label v2.2.0
+        if: contains(github.event.issue.body, '2.2.0')
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: v2.2.0
