@@ -2,7 +2,7 @@ name: Issue assignment and project
 
 on:
     issues:
-        types: [opened]
+        types: [opened, unassigned]
         
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
