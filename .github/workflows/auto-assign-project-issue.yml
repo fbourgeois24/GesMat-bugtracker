@@ -17,14 +17,14 @@ jobs:
                   assignees: fbourgeois24
                   numOfAssignee: 0
                   
-    assign_one_project:
-        runs-on: ubuntu-latest
-        name: Assign to a project
-        steps:
-        - name: Assign NEW issues and NEW pull requests to project
-          uses: srggrs/assign-one-project-github-action@1.2.1
-          #if: github.event.action == 'opened'
-          with:
-            project: 'https://github.com/fbourgeois24/GesMat-bugtracker/projects/1'
-            column_name: 'Inbox'
+    # assign_one_project:
+    #     runs-on: ubuntu-latest
+    #     name: Assign to a project
+    #     steps:
+    #     - name: Assign NEW issues and NEW pull requests to project
+    #       uses: srggrs/assign-one-project-github-action@1.2.1
+    #       #if: github.event.action == 'opened'
+    #       with:
+    #         project: 'https://github.com/fbourgeois24/GesMat-bugtracker/projects/1'
+    #         column_name: 'Inbox'
 
